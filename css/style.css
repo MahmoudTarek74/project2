@@ -1,0 +1,411 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* ============================================ */
+body {
+    background-color: #ccc5b9;
+    font-family: "Agbalumo", system-ui;
+}
+/* ============================================ */
+.container {
+    width: 80%;
+    margin: auto;
+}
+/* ============================================ */
+.links {
+    list-style: none;
+    color: #eb5e28;
+    font-size: 22px;
+}
+/* ============================================ */
+a {
+    text-decoration: none;
+}
+/* ============================================ */
+header {
+    background-color: #403d39;
+    height: 75px;
+}
+/* ============================================ */
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ============================================ */
+.header-content img{
+    flex: 1;
+    max-width: 100px;
+}
+/* ============================================ */
+.header-content nav{
+    flex:3;
+    text-align: center;
+}
+/* ============================================ */
+.header-content  .login{
+    flex:1;
+    text-align: right;
+    font-size: 25px;
+    color: #fffcf2;
+    cursor: pointer;
+}
+/* ============================================ */
+.header-content ul li {
+    display: inline-block;
+}
+/* ============================================ */
+.header-content ul li a , .header-content ul li a{
+    color: #eb5e28;
+    font-size: 20px;
+}
+/* ============================================ */
+.header-content nav ul li .link-item {
+    position: relative;
+    padding: 10px 22px;
+    display: block;
+    font-weight: bold;
+    position: relative;
+}
+/* ============================================ */
+.header-content nav ul li .link-item:before,
+.header-content nav ul li .link-item:after{
+    content:"";
+    position: absolute;
+    border-style: solid; 
+    left: 0;
+    top:0; 
+    transition: transform 0.2s;
+}
+/* ============================================ */
+.header-content nav ul li .link-item:before{
+    border-width: 0 2px;
+    height: 100%; 
+    width: 95%;
+    transform: scale3d(1,0,1);
+}
+/* ============================================ */
+.header-content nav ul li .link-item:hover:before{
+    transform: scale3d(1,1,1);
+}
+/* ============================================ */
+.header-content nav ul li .link-item:after{
+    border-width: 2px 0;
+    height: 90%; 
+    width: 95%;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+}
+/* ============================================ */
+.header-content nav ul li .link-item:hover:after{
+    transform: scale3d(1,1,1);
+    transition-delay: .2s;
+}
+/* ============================================ */
+.header-content .login ul li  {
+    padding: 10px ;
+    font-weight: bold;
+}
+/* ============================================ */
+.header-content .login ul li:last-child i {
+    position: relative;
+    margin-right: 10px;
+}
+/* ============================================ */
+.header-content .login ul li:last-child i::after{
+    position: absolute;
+    content: "0";
+    background-color: #403d39;
+    color: #eb5e28;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 15px;
+    bottom: -5px;
+}
+/* ============================================ */
+.dropdown{
+    position: relative;
+}
+/* ============================================ */
+.dropdown-phones{
+    position: absolute;
+    width: 350px;
+    height: 40px;
+    border: 2px solid #eb5e28;
+    background-color: #403d39;
+    color: #ccc5b9;
+    padding: 0px 15px;
+    margin-top: 5px;
+    transform: scale(0);
+    transition: transform 0.5s , visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+/* ============================================ */
+.dropdown:hover .dropdown-phones{
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+/* ============================================ */
+.dropdown-phones ul{
+    display: table-cell;
+    text-align: left;
+}
+/* ============================================ */
+.dropdown-phones ul li a {
+    display: block;
+    border-bottom: 2px dotted #eb5e28;
+    font-size: 17px;
+    margin: 0px 10px;
+}
+/* ============================================ */
+section.main img {
+    width: 100%;
+}
+/* ============================================ */
+.section-padding {
+    padding: 40px 0;
+}
+/* ============================================ */
+.new-arrivals{
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 40px; ;
+}
+/* ============================================ */
+.categories-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* ============================================ */
+.new-arrivals .line{
+    display: block;
+    width: 100px;
+    margin: auto;
+    height: 2px;
+    background-color: #403d39;
+    transition: width .5s;
+}
+/* ============================================ */
+.new-arrivals:hover .line{
+    width: 150px;
+}
+/* ============================================ */
+.categories-title{
+    color: #403d39;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* ============================================ */
+.category-items{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:10px;
+    text-align: center;
+}
+/* ============================================ */
+.category-items img{
+    width: 100%;
+    margin-bottom: 10px;
+    border: solid 3px #403d39;
+    background-color: #fffcf2;
+    border-radius: 20px;
+}
+/* ============================================ */
+.category-item-subtitle{
+   color: #eb5e28;
+   font-size: 22px;
+   font-weight: normal;
+}
+/* ============================================ */
+.category-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #403d39;
+}
+/* ============================================ */
+.category-item button {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    border: solid 3px #403d39;
+    background-color: #403d39;
+    color: #eb5e28;
+    border-radius: 20px;
+}
+/* ============================================ */
+.category-item button:hover {
+    background-color: #eb5e28;
+    color: #403d39;
+    cursor: pointer;
+}
+/* ============================================ */
+.category-item {
+    position: relative;
+}
+/* ============================================ */
+.discount {
+    margin:75px 0px;
+    display: flex;
+}
+/* ============================================ */
+.discount-desc{
+    flex:2;
+    background: #fffcf2;
+    padding: 20px;
+    position: relative;
+}
+/* ============================================ */
+.discount-item {
+    flex: 1;
+    height: 300px;
+    position: relative;
+}
+/* ============================================ */
+.discount-item-info {
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+/* ============================================ */
+.discount-item-info h3 {
+    font-weight: normal;
+    color: #403d39;
+    font-size: 40px;
+}
+/* ============================================ */
+.discount-title {
+    font-weight: normal;
+    color: #403d39;
+    font-size: 35px;
+}
+/* ============================================ */
+.discount-item:nth-child(2) {
+    background-image: url(../images/dis-1.png);
+    background-size: cover;
+    margin:0 20px;
+    transition: transform 0.5s;
+}
+/* ============================================ */
+.discount-item:nth-child(2):hover {
+    transform: scale(1.1);
+}
+/* ============================================ */
+.discount-desc .top {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+/* ============================================ */
+.discount-desc .top .icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 30px;
+    color: #403d39;
+}
+/* ============================================ */
+.discount-desc .top +p{
+    color: #403d39;
+    font-size: 18px;
+}
+/* ============================================ */
+.discount-item:nth-child(3) {
+    background-image: url(../images/dis-2.png);
+    background-size: cover; 
+    transition: transform .5s;
+}
+/* ============================================ */
+.discount-item:nth-child(3):hover {
+    transform: scale(1.1);
+}
+/* ============================================ */
+.numbers {
+    height: 200px ;
+    width: 100% ;
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    background-color: #403d39;
+}
+/* =============================================================== */
+.num {
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    color: #fffcf2;
+}
+/* =============================================================== */
+.num:hover {
+    color: #eb5e28;
+    cursor: pointer;
+}
+/* =============================================================== */
+.section , .front , .back {
+    width: 250px;
+    height: 300px;
+    background-color: #fffcf2;
+    border-radius: 20px;
+    float: left;
+}
+/* ========================================================== */
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    font-size: 20px;
+}
+/* ========================================================== */
+.back {
+    transform: rotateY(180deg);
+    font-size: 20px;
+    line-height: 2em;
+}
+.back i {
+    color: gold;
+}
+/* ========================================================== */
+.section {
+    margin: 40px 80px;
+    position: relative;
+    transition: 2s;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+/* ========================================================== */
+.front , .back {
+    position: absolute;
+    color: #403d39;
+}
+/* ========================================================== */
+.section:hover {
+    transform: rotateY(180deg);
+}
+/* ========================================================== */
+button {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #403d39;
+    color: #fffcf2;
+}
+/* ========================================================== */
+button:hover {
+    background-color: #eb5e28;
+    color: #403d39;
+}
+/* ========================================================== */
+
+
+
+
+
+
+
